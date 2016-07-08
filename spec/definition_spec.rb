@@ -36,11 +36,20 @@ describe(Definition) do
     end
   end
 
-      # describe('.clear') do
-      #   it('clears the array of saved definitions') do
-      #     test_definition1 = Definition.new({:description => "um cara espaçoso", :partofspeech => "adjective"}).save()
-      #     test_definition2 = Definition.new({:description => "um cara que acha que tudo está sempre bem e gosta de abusar da boa vontade das outras pessoas", :partofspeech => "adjective"}).save()
+  describe('.all') do
+    it('is empty at first') do
+      expect(Definition.all()).to eq([])
+    end
+  end
 
-
+  describe('.find') do
+    it('returns a definition by id') do
+      test_definition1 = Definition.new({:description => "um cara espaçoso", :partofspeech => "adjective"})
+      test_definition1.save()
+      test_definition2 = Definition.new({:description => "um cara que acha que tudo está sempre bem e gosta de abusar da boa vontade das outras pessoas", :partofspeech => "adjective"})
+      test_definition2.save()
+      expect(Definition.find(test_definition1.id())).to eq(test_definition1)
+    end
+  end
 
 end
