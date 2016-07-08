@@ -22,7 +22,7 @@ class Word
   end
 
   define_singleton_method(:clear) do
-    @@dealerships = []
+    @@words = []
   end
 
   define_singleton_method(:find) do |id|
