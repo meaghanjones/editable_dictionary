@@ -14,4 +14,12 @@ describe(Word) do
     end
   end
 
+  describe('#id') do
+    it('returns the id of the word') do
+      test_word = Word.new({:name => "huge"})
+      expect(test_word.id()).to(eq(1))
+    end
+  end
+
+
 end
