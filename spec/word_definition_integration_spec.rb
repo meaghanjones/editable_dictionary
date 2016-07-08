@@ -9,15 +9,14 @@ describe('the add word path', {:type => :feature})do
     click_link('add-word')
     expect(page).to have_content('Add Words')
   end
-end
 
-#   it ("processes the user entry and confirms it was sucessfully added") do
-#     visit('/dealerships/new')
-#     fill_in('name', :with => 'Bobs used cars')
-#     click_button('Add')
-#     expect(page).to have_content('Success!')
-#   end
-# end
+  it ("processes the user entry and confirms it was sucessfully added") do
+    visit('/words/new')
+    fill_in('name', :with => 'ginourmous')
+    click_button('Add')
+    expect(page).to have_content('Success!')
+  end
+end
 #
 # describe('the add vehicle path', {:type => :feature}) do
 #   it('processes the user vehicle entry and confirms it was successfully added') do
