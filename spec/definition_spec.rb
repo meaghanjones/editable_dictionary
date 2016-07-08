@@ -28,5 +28,19 @@ describe(Definition) do
     end
   end
 
+  describe('.clear') do
+    it('clears the array of saved definitions') do
+      test_definition1 = Definition.new({:description => "um cara espaçoso", :partofspeech => "adjective"}).save()
+      test_definition1.clear()
+      expect(Definition.all()).to eq([])
+    end
+  end
+
+      # describe('.clear') do
+      #   it('clears the array of saved definitions') do
+      #     test_definition1 = Definition.new({:description => "um cara espaçoso", :partofspeech => "adjective"}).save()
+      #     test_definition2 = Definition.new({:description => "um cara que acha que tudo está sempre bem e gosta de abusar da boa vontade das outras pessoas", :partofspeech => "adjective"}).save()
+
+
 
 end
