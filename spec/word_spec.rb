@@ -24,7 +24,7 @@ describe(Word) do
   describe('#definitions') do
     it ("initially returns an empty array of definitions for the word") do
       test_word = Word.new({:name => "huge"})
-      expect(test_word.definitions()).to eq([])
+      expect(test_word.explanations()).to eq([])
     end
   end
 
@@ -57,6 +57,16 @@ describe(Word) do
       test_word2 = Word.new({:name => "ginourmous"})
       test_word2.save()
       expect(Word.find(test_word1.id())).to eq(test_word1)
+    end
+  end
+
+  describe('#add_definition') do
+    it('adds a definition to the word') do
+      test_word1 = Word.new({:name => "folgado"})
+      test_word1.save()
+      test_definition = Definition.new({:description => "um cara que acha que tudo está sempre bem e gosta de abusar da boa vontade das outras pessoas", :partofspeech => "adjective"})
+      test_definition.save()
+      expect(test_word1.add_definition(test_definition)).to(eq([test_definition]))
     end
   end
 
