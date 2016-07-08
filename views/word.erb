@@ -1,0 +1,11 @@
+<h2><%= @word.name() %></h2>
+
+<ul>
+  <%@word.definitions().each() do |definition| %>
+    <li><%= definition.description()%>(part of speech: <%=definition.partofspeech()%>)</li>
+  <%end%>
+</ul>
+
+
+<a href="/words/<%=@word.id()%>/definitions/new" id='add-definition'>Add a new definition</a>
+<a href="/">Home</a>

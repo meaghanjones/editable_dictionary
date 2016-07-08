@@ -9,10 +9,10 @@ get('/') do
   erb(:index)
 end
 
-get('/words') do
-  @words = Word.all()
-  erb(:words)
-end
+# get('/words') do
+#   @words = Word.all()
+#   erb(:words)
+# end
 
 get('/words/new') do
   erb(:words_form)
@@ -31,20 +31,20 @@ end
 
 get('/words/:id/definitions/new') do
   @word = Word.find(params.fetch('id').to_i())
-  erb(:word_defintions_form)
+  erb(:word_definitions_form)
 end
 
-post('/defintions') do
+post('/definitions') do
   description = params.fetch('description')
   partofspeech = params.fetch('partofspeech')
   @definition = Definition.new({:description => description, :partofspeech => partofspeech})
-  @defintion.save()
+  @definition.save()
   @word = Word.find(params.fetch('word_id').to_i())
-  @word.add_defintion(@definition)
+  @word.add_definition(@definition)
   erb(:definition_success)
 end
 
 get('/definitions/:id') do
-  @defintion = Defintion.find(params.fetch('id').to_i())
-  erb(:defintion)
+  @definition = Definition.find(params.fetch('id').to_i())
+  erb(:definition)
 end

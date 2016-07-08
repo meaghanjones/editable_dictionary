@@ -24,7 +24,7 @@ describe(Word) do
   describe('#definitions') do
     it ("initially returns an empty array of definitions for the word") do
       test_word = Word.new({:name => "huge"})
-      expect(test_word.explanations()).to eq([])
+      expect(test_word.definitions()).to eq([])
     end
   end
 

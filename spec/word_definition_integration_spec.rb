@@ -10,21 +10,20 @@ describe('the add word path', {:type => :feature})do
     expect(page).to have_content('Add Words')
   end
 
-  it ("processes the user entry and confirms it was sucessfully added") do
+  it ("processes the user entry of a word and confirms it was sucessfully added") do
     visit('/words/new')
     fill_in('name', :with => 'ginourmous')
     click_button('Add')
     expect(page).to have_content('Success!')
   end
 end
-#
-# describe('the add vehicle path', {:type => :feature}) do
-#   it('processes the user vehicle entry and confirms it was successfully added') do
-#     visit('/dealerships/:id/vehicles/new')
-#     fill_in('make', :with => 'Mazda')
-#     fill_in('model', :with => 'Protege')
-#     fill_in('year', :with => '2001')
-#     click_button('Add')
-#     expect(page).to have_content('Success')
-#   end
-# end
+
+describe('the add definition path', {:type => :feature}) do
+  it('processes the user definition entry and confirms it was successfully added') do
+    visit('/words/:id/definitions/new')
+    fill_in('description', :with => 'really big')
+    fill_in('partofspeech', :with => 'adjective')
+    click_button('Add definition')
+    expect(page).to have_content('Success!')
+  end
+end

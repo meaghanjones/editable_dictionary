@@ -1,5 +1,4 @@
-<h1>Your Own Dictionary</h1>
-<h3>Your Word Entries</h3>
+ <h3>Your Word Entries</h3>
 <ul>
   <% @words.each() do |word| %>
     <li><a href="/words/<%=word.id() %>"><%= word.name() %></a></li>

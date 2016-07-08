@@ -23,7 +23,7 @@ describe(Definition) do
 
   describe('#save') do
     it('saves the definition into an array') do
-      test_definition = Definition.new({:description => "a very large bird", :partofspeech => "noun"})
+      test_definition = Definition.new({:descrtiption => "a very large bird", :partofspeech => "noun"})
       expect(test_definition.save()).to eq([test_definition])
     end
   end
