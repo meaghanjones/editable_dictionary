@@ -42,4 +42,12 @@ describe(Word) do
     end
   end
 
+  describe('#clear') do
+    it("empties the saved word") do
+      test_word = Word.new({:name => "huge"}).save()
+      test_word.clear()
+      expect(Word.all()).to eq ([])
+    end
+  end
+
 end
