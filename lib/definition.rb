@@ -8,5 +8,9 @@ class Definition
     @id = @@definitions.length().+(1)
   end
 
+  define_singleton_method(:clear) do
+    @@definitions = []
+  end
+
 
 end

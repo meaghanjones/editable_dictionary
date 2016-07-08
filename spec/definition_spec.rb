@@ -3,9 +3,9 @@ require('word')
 require('definition')
 
 describe(Definition) do
-  # before() do
-  #   Definition.clear()
-  # end
+  before() do
+    Definition.clear()
+  end
 
   describe('#description') do
     it('returns a description of a word') do
@@ -20,5 +20,7 @@ describe(Definition) do
       expect(test_definition.partofspeech()).to eq("noun")
     end
   end
+
+  describe('')
 
 end
