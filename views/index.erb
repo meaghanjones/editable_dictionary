@@ -1,0 +1,10 @@
+<h1>Your Own Dictionary</h1>
+<h3>Your Word Entries</h3>
+<ul>
+  <% @words.each() do |word| %>
+    <li><a href="/words/<%=word.id() %>"><%= word.name() %></a></li>
+  <% end %>
+</ul>
+
+<h3>Add a word here</h3>
+<a href="/words/new">Add a New Word</a>
