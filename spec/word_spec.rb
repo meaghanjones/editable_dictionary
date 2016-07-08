@@ -29,24 +29,34 @@ describe(Word) do
   end
 
   describe('#save') do
-    it ("adds a word to the array of saved words")do
+    it ("adds a word to the array of saved words") do
       test_word = Word.new({:name => "huge"})
       test_word.save()
       expect(Word.all()).to eq ([test_word])
     end
   end
 
-  describe('#all') do
-    it("is empty at first")do
+  describe('.all') do
+    it("is empty at first") do
       expect(Word.all()).to eq([])
     end
   end
 
-  describe('#clear') do
-    it("empties the saved word") do
+  describe('.clear') do
+    it("empties the saved words") do
       test_word = Word.new({:name => "huge"}).save()
       test_word.clear()
       expect(Word.all()).to eq ([])
+    end
+  end
+
+  describe('.find') do
+    it("return a word by it id number") do
+      test_word1 = Word.new({:name => "huge"})
+      test_word1.save()
+      test_word2 = Word.new({:name => "ginourmous"})
+      test_word2.save()
+      expect(Word.find(test_word1.id())).to eq(test_word1)
     end
   end
 
