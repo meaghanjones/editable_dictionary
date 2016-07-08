@@ -1,0 +1,10 @@
+<h2><Add a definition to<%= @word.name()%></h1>
+<form action="/definitions" method="post">
+    <input id="word_id" name="word_id" type="hidden" value='<%= @dealership.id()%>'>
+
+    <label for="description">The definition</label>
+    <input id="description" name="desctiption" type="text"><br>
+
+    <label for="partofspeech">The part of speech</label>
+    <input id="partofspeech" name="partofspeech" type="text" placeholder="Enter: noun, verb, adjective, adverb, interjection">
+</form>
