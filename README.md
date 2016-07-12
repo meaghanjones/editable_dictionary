@@ -10,7 +10,7 @@ This web application allows the user to first add a word to their own customizab
 
 ## Setup/Installation Requirements
 
-Follow the link to launch your very own dictionary application in your browser: [Your Very Own Dictionary!] ()
+Follow the link to launch your very own dictionary application in your browser: [Your Very Own Dictionary!] (https://meaghan-dictionary.herokuapp.com/)
 
 
 ## Known Bugs
