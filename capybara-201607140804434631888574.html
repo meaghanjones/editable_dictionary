@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+    <title>Your Very Own Dictionary</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+   <link href="css/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Your Very Own Dictionary</h1>
+      </div>
+    <div>
+    <div class ="container">
+    <h2><Add a definition toginourmous></h1>
+<form action="/definitions" method="post">
+    <input id="word_id" name="word_id" type="hidden" value='1'>
+
+    <label for="description">The definition</label>
+    <input class="form-control" id="description" name="description" type="text"><br>
+
+     <label for="partofspeech">The part of speech</label>
+    <input class="form-control" id="partofspeech" name="partofspeech" type="text" placeholder="Enter: noun, verb, adjective, adverb, interjection"><br>
+    <button class="btn-success" type="submit">Add definition</button>
+</form>
+
+    </div>
+  </body>
+</html>

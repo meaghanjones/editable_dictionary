@@ -27,7 +27,8 @@ describe('the add definition path', {:type => :feature}) do
   it('processes the user definition entry and confirms it was successfully added') do
     word = Word.new({:name => 'ginourmous', :definitions => nil, :id => nil})
     word.save()
-    visit('/words/:id/definitions/new')
+    visit('/words/1/definitions/new')
+    save_and_open_page
     fill_in('description', :with => 'really big')
     fill_in('partofspeech', :with => 'adjective')
     click_button('Add definition')
